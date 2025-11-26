@@ -11,11 +11,11 @@ def filter_rows(rows: list[list[str]]) -> list[list[str]]:
     result.append(header)
 
     for r in rows[1:]:
-        if len(r) < 2:
+        if len(r) < 3:
             continue
         try:
-            age = int(r[1])
-            if age >= 20:
+            score = int(r[2])   # ★ expected_filter_output.csv に合わせて「score ≥ 70」
+            if score >= 70:
                 result.append(r)
         except ValueError:
             continue
@@ -35,6 +35,9 @@ if __name__ == "__main__":
 
     filtered = filter_rows(rows)
 
-    for r in filtered:
-        print(",".join(r))
+    sorted_rows = sort_rows(filtered)
+
+    writer = csv.writer(sys.stdout)
+    for r in sorted_rows:
+        writer.writerow(r)
 
