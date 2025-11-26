@@ -30,3 +30,16 @@ def sort_rows(rows: list[list[str]]) -> list[list[str]]:
     
     return sorted(rows, key=lambda x: x[2] if len(x) > 2 else "")
 
+if __name__ == "__main__":
+    import sys
+    import csv
+
+    reader = csv.reader(sys.stdin)
+    rows = list(reader)
+
+    filtered = filter_rows(rows)
+
+    for r in filtered:
+        print(",".join(r))
+
+
