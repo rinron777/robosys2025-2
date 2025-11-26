@@ -3,12 +3,10 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 def filter_rows(rows: list[list[str]]) -> list[list[str]]:
-    
     if not rows:
         return []
 
     result = []
-
     header = rows[0]
     result.append(header)
 
@@ -20,15 +18,13 @@ def filter_rows(rows: list[list[str]]) -> list[list[str]]:
             if age >= 20:
                 result.append(r)
         except ValueError:
-            
             continue
-
     return result
 
 
 def sort_rows(rows: list[list[str]]) -> list[list[str]]:
-    
     return sorted(rows, key=lambda x: x[2] if len(x) > 2 else "")
+
 
 if __name__ == "__main__":
     import sys
@@ -41,5 +37,4 @@ if __name__ == "__main__":
 
     for r in filtered:
         print(",".join(r))
-
 
