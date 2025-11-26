@@ -4,8 +4,15 @@
 
 def filter_rows(rows: list[list[str]]) -> list[list[str]]:
     
+    if not rows:
+        return []
+
     result = []
-    for r in rows:
+
+    header = rows[0]
+    result.append(header)
+
+    for r in rows[1:]:
         if len(r) < 2:
             continue
         try:
@@ -13,7 +20,9 @@ def filter_rows(rows: list[list[str]]) -> list[list[str]]:
             if age >= 20:
                 result.append(r)
         except ValueError:
+            
             continue
+
     return result
 
 
