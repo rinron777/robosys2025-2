@@ -30,16 +30,17 @@ jobs:
           echo -e "a,b,c\n1,2,3\n4,,6\n7,8,9.5\nx,5,6" > sample.csv
 
           output=$(cat sample.csv | ./csv_sum_avg.py)
-
           expected="sum: a=12.00 b=15.00 c=24.50
 avg: a=4.00 b=5.00 c=8.17"
 
           if [ "$output" != "$expected" ]; then
             echo "Test failed!"
-            echo "Output:"
+            echo "Expected:"
+            echo "$expected"
+            echo "Got:"
             echo "$output"
             exit 1
+          else
+            echo "Test passed!"
           fi
-
-          echo "Test passed on Python ${{ matrix.python-version }}!"
 
