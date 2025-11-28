@@ -1,10 +1,10 @@
 #!/bin/bash -xv
-# SPDX-FileCopyrightText: 2025 rinron
-#SPDX-License-Identifier: GPL-3.0-only
+# SPDX-FileCopyrightText: 2025 rinron777
+#SPDX-License-Identifier: GPL-3-Clause
 
 ng () {
-    echo ${1}行目に不備あり
-    res=1
+       echo ${1}行目に不備あり
+       res=1
 }
 
 res=0
