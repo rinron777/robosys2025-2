@@ -3,7 +3,7 @@
 #SPDX-License-Identifier: GPL-3-Clause
 
 ng () {
-       echo ${1}行目に不備あり
+       echo "Error at line ${1}"
        res=1
 }
 
