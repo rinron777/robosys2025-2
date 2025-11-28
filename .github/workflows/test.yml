@@ -1,46 +1,13 @@
-name: CSV Sum and Average Test
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
+name: test
+on: push
 jobs:
   test:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
-        python-version: ["3.8", "3.9", "3.10", "3.11"]
-
+        python-vesion: ["3.7", "3.8", "3.9", "3.10", "3.11", "3.12"]
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
-        with:
-          python-version: ${{ matrix.python-version }}
-
-      - name: Make script executable
-        run: chmod +x csv_sum_avg.py
-
-      - name: Run CSV sum/average test
-        run: |
-          echo -e "a,b,c\n1,2,3\n4,,6\n7,8,9.5\nx,5,6" > sample.csv
-
-          output=$(cat sample.csv | ./csv_sum_avg.py)
-          expected="sum: a=12.00 b=15.00 c=24.50
-avg: a=4.00 b=5.00 c=8.17"
-
-          if [ "$output" != "$expected" ]; then
-            echo "Test failed!"
-            echo "Expected:"
-            echo "$expected"
-            echo "Got:"
-            echo "$output"
-            exit 1
-          else
-            echo "Test passed!"
-          fi
+    - uses: actions/checkout@v3
+    - name: All test
+      run: bash -xv ./test.bash  
 
