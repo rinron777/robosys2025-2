@@ -44,11 +44,15 @@ $ seq 5 | ./calc div
 0.008333333333333333
 ```
 ### 手動テスト
+```
 bash -xv ./test.bash　を実行
+```
+```
 seq 5 | ./calc plus
 seq 5 | ./calc minus
 seq 5 | ./calc times
 seq 5 | ./calc div
+```
 これらのテストを手動で行い、GitHub Actionsと同じ挙動を確認できれば成功となります。
 
 ## 必要なソフトウェア
