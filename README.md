@@ -15,9 +15,11 @@
 ## 使用方法
 
 ### インストール
-`git clone https://github.com/rinron777/robosys2025-2.git`
-`cd robosys2025-2`
-`ls`
+```
+git clone https://github.com/rinron777/robosys2025-2.git
+cd robosys2025-2
+ls
+```
 
 ### 実行方法
 ```
