@@ -45,8 +45,9 @@ $ seq 5 | ./calc div
 ```
 ### 手動テスト
 ```
-bash -xv ./test.bash　を実行
+bash -xv ./test.bash
 ```
+上のコマンドを実行
 ```
 seq 5 | ./calc plus
 seq 5 | ./calc minus
