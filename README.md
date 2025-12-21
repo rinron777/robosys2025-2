@@ -61,14 +61,14 @@ Python(3.7 ~ 3.12:テスト済み)
 bashコマンド(テストスクリプトにて必要)
 
 ## テスト環境
-以下の環境にて実行
-Ubuntu 22.04.5 LTS
-bash
+### 以下の環境にて実行
+- Ubuntu 22.04.5 LTS
+- bash
 
 ## ライセンス
-SPDX-License-Identifier: BSD-3-Clause 
-© 2025 Rintatrou Matunaga
-コマンドファイル内にSPDXの記載をしてあります
+- SPDX-License-Identifier: BSD-3-Clause 
+- © 2025 Rintatrou Matunaga
+- コマンドファイル内にSPDXの記載をしてあります
 
 ## 補足事項
 - このプログラムは標準入力を使ったストリーム処理です
