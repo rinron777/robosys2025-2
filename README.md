@@ -65,7 +65,6 @@ usage: calc [plus|minus|times|div]
 - Python(3.7 ~ 3.12:テスト済み)
 
 ## テスト環境
-### 以下の環境にて実行
 - Ubuntu 22.04.5 LTS
 
 ## ライセンス
