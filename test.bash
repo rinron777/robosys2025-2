@@ -1,6 +1,6 @@
 #!/bin/bash -xv
 # SPDX-FileCopyrightText: 2025 rinron777
-#SPDX-License-Identifier: BSD 3-Clause
+#SPDX-License-Identifier: BSD-3-Clause
 
 ng () {
        echo "Error at line ${1}"
